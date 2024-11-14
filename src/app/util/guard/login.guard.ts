@@ -8,7 +8,8 @@ export const loginGuard: CanActivateFn = (route, state) => {
   if (isLogedIn == true) {
     const router = inject(Router);
     router.navigateByUrl('');
+    return false;
+  } else {
+    return true;
   }
-
-  return isLogedIn;
 };
