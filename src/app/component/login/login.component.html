@@ -1,0 +1,40 @@
+<!-- nav-bar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-brand">
+            <img class="ms-1 me-2" src="favicon.ico" alt="Angular App" width="30">
+            Login Angular App
+        </div>
+    </div>
+</nav>
+
+<!-- login-form -->
+<div class="card text-center mx-auto mt-4" style="width: 30rem;">
+    <div class="card-header">
+        Login
+    </div>
+    <div class="card-body text-start">
+        <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
+            <div class="mb-2">
+                <label class="form-label">Customer Id</label>
+                <input class="form-control" type="text" formControlName="loginId">
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Password</label>
+                <input class="form-control" type="password" formControlName="password">
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Date Of Birth</label>
+                <input class="form-control" type="text" formControlName="dob">
+            </div>
+            @if(errorResponse?.message != null) {
+            <div>
+                <p class="text-danger">{{errorResponse?.message}}</p>
+            </div>
+            }
+            <div class="d-grid mt-3">
+                <button class="btn btn-primary btn-md" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
