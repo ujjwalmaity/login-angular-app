@@ -1,5 +1,9 @@
 <app-nav-bar></app-nav-bar>
 
-<p>dashboard works!</p>
-
-{{mostActive | json}}
+@for(stock of mostActive?.data; track stock){
+<div class="card mx-3 my-3 px-2 py-2">
+    <!-- <div>{{stock | json}}</div> -->
+    <div>{{stock.name}}</div>
+    <div>{{stock.ltp}}</div>
+</div>
+}
