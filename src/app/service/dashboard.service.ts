@@ -9,9 +9,7 @@ import { MostActive } from '../model/most-active';
 })
 export class DashboardService {
 
-  constructor(private httpClient: HttpClient) {
-    console.log('DashboardService - constructor');
-  }
+  constructor(private httpClient: HttpClient) { }
 
   fetchMostActive(): Observable<MostActive> {
     return this.httpClient.get<MostActive>(Helper.urlMostActive);

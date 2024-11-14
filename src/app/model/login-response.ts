@@ -5,36 +5,36 @@ export class LoginResponse {
     data?: Data;
 }
 
-export class Data {
+class Data {
     responseCode?: number;
     result?: Result;
     vtoken?: string;
     token?: string;
 }
 
-export class Result {
+class Result {
     entityDetails?: EntityDetails;
     loginDetails?: LoginDetails;
     tokenDetails?: TokenDetails;
 }
 
-export class EntityDetails {
+class EntityDetails {
     entityIdentity?: EntityIdentity;
     tradingAccountNumber?: string;
 }
 
-export class EntityIdentity {
+class EntityIdentity {
     entityIdType?: number;
     entityId?: string;
 }
 
-export class LoginDetails {
+class LoginDetails {
     invalidLoginCount?: number;
     lastLoginTime?: string;
     lastLogoffTime?: string;
 }
 
-export class TokenDetails {
+class TokenDetails {
     accessToken?: string;
     expiresIn?: number;
     refreshToken?: string;

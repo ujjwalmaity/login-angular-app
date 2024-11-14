@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { ProfileService } from '../../service/profile.service';
-import { ProfileResponse } from '../../model/profile-response';
+import { ProfileDetails } from '../../model/profile-details';
 import { JsonPipe } from '@angular/common';
 
 @Component({
@@ -13,14 +13,14 @@ import { JsonPipe } from '@angular/common';
 })
 export class ProfileComponent implements OnInit {
 
-  profileResponse?: ProfileResponse;
+  profileDetails?: ProfileDetails;
 
   constructor(private profileService: ProfileService) { }
 
   ngOnInit(): void {
-    this.profileService.fetchProfile().subscribe(
-      (profile: ProfileResponse) => {
-        this.profileResponse = profile;
+    this.profileService.fetchProfileDetails().subscribe(
+      (data: ProfileDetails) => {
+        this.profileDetails = data;
       }
     );
   }

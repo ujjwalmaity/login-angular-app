@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ProfileResponse } from '../model/profile-response';
+import { ProfileDetails } from '../model/profile-details';
 import { Observable } from 'rxjs';
 import { Helper } from '../util/helper';
 
@@ -9,11 +9,10 @@ import { Helper } from '../util/helper';
 })
 export class ProfileService {
 
-  constructor(private httpClient: HttpClient) {
-    console.log('ProfileService - constructor');
+  constructor(private httpClient: HttpClient) { }
+
+  fetchProfileDetails(): Observable<ProfileDetails> {
+    return this.httpClient.get<ProfileDetails>(Helper.urlProfile);
   }
 
-  fetchProfile(): Observable<ProfileResponse> {
-    return this.httpClient.get<ProfileResponse>(Helper.urlProfile);
-  }
 }

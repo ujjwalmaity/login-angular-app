@@ -22,8 +22,6 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private router: Router, private loginService: LoginService) { }
 
   ngOnInit(): void {
-    console.log('LoginComponent - ngOnInit');
-
     this.loginForm = this.fb.group({
       loginId: '',
       password: '',
@@ -55,4 +53,5 @@ export class LoginComponent implements OnInit {
         }
       });
   }
+
 }

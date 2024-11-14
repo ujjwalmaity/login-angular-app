@@ -1,10 +1,10 @@
-export class ProfileResponse {
+export class ProfileDetails {
     httpStatus?: string
     message?: string
     data?: Data
 }
 
-export class Data {
+class Data {
     ementityid?: string
     emname?: string
     emphoneno1?: any
@@ -33,7 +33,7 @@ export class Data {
     emloginid?: string
 }
 
-export class Banklist {
+class Banklist {
     ebdaccnumber?: string
     ebdbmbankcode?: string
     ebdementityid?: string
@@ -53,7 +53,7 @@ export class Banklist {
     ebdifsccode?: string
 }
 
-export class Nomineedetails {
+class Nomineedetails {
     endentid?: any
     endnomdtlsreqr?: any
     endnomineename?: any

@@ -11,9 +11,7 @@ import { ErrorResponse } from '../model/error-response';
 })
 export class LoginService {
 
-  constructor(private httpClient: HttpClient) {
-    console.log('LoginService - constructor');
-  }
+  constructor(private httpClient: HttpClient) { }
 
   doLogin(login: Login): Observable<LoginResponse> {
     const body = {
@@ -32,4 +30,5 @@ export class LoginService {
         return throwError(() => error.error as ErrorResponse);
       }));
   }
+
 }
