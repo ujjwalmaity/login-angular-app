@@ -1,5 +1,12 @@
 <app-nav-bar></app-nav-bar>
 
-<p>profile works!</p>
-
-{{profileDetails | json}}
+<div class="card mx-3 my-3 px-2 py-2">
+    <!-- <div>{{profileDetails | json}}</div> -->
+    <div>{{profileDetails?.data?.ementityid}}</div>
+    <div>{{profileDetails?.data?.emname}}</div>
+    <div>{{profileDetails?.data?.emedemailid}}</div>
+    <div>{{profileDetails?.data?.emedmobilenumber}}</div>
+    <div>{{profileDetails?.data?.empanno}}</div>
+    <div>{{profileDetails?.data?.emedgender}}</div>
+    <div>{{profileDetails?.data?.emdob}}</div>
+</div>
