@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { Helper } from '../../util/helper';
 
 @Component({
   selector: 'app-nav-bar',
