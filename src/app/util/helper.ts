@@ -5,4 +5,14 @@ export class Helper {
 
     // Local Storage Key
     public static lStorageToken: string = 'token';
+
+    // Helper Method
+    static isUserLoggedIn(): boolean {
+        const token = localStorage.getItem(Helper.lStorageToken);
+        if (token != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
